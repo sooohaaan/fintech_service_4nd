@@ -53,3 +53,59 @@ a:hover {
 input:focus {
   background-color: yellow;
 }
+
+input [type="text"]:focus {
+  background-color: red;
+}
+
+input[type="password"]:focus {
+  color: white;
+}
+
+/* 구조 가상 클래스 셀렉터 */
+/* 셀렉터:first-child - 셀렉터에 해당하는 모든 요소 중 첫번째 자식의 요소를 선택 */
+/* 셀렉터:last-child - 셀렉터에 해당하는 모든 요소 중 마지막 자식의 요소를 선택 */
+
+p:first-child {
+  color: red;
+}
+
+p:last-child {
+  color: blue;
+}
+
+/* 셀렉터:nth-child */
+/* :nth-child(n) - 셀렉터에 해당하는 요소중 앞에서 n번째 자식의 요소를 선택 0  */
+/* :nth-last-child(n) - 셀렉터에 해당하는 모든 요소 중에  -1 */
+/* n은 1부터 시작 */
+/* 짝수번째 2n */
+
+/* ol의 요소의 자식요소인 li중에서 짝수 번째 요소만을 선택 */
+ol > li:nth-child(2n) {
+  color: orange;
+}
+
+/* ol 요소인 자식요소인 li중에서 홀수 번째 요소만 선택 */
+ol > li:nth-child(2n+1) {
+  color: green;
+}
+
+/* ol의 li 중에서 첫번째 요소만 선택 */
+ol > li:first-child {
+  color: red;
+}
+
+/* ol li 중에서 3번째 요소만 선택 */
+ol > li:nth-child(3) {
+  background-color: yellow;
+}
+
+/* ul의 모든 자식 요소 중에서 뒤에서부터 홀수번째 요소만 선택 */
+ui > :nth-last-child(2n+1) {
+  color: brown;
+}
+
+/* ul의 모든 자식 요수 중에서  */
+ul > :nth-last-child(2n) {
+  color: blue;
+}
